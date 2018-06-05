@@ -20,4 +20,8 @@ class HomeController extends Controller
     {
         return Auth::guard('admin');
     }
+
+    public function admintable() {
+        return view('Admin.homepage.admintable');
+    }
 }

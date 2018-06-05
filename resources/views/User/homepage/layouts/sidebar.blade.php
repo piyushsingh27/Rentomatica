@@ -40,11 +40,11 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="/home/vacancySearchResults"><i class="fa fa-briefcase"></i> Search Vacancy</a></li>
-          <li><a href="/home/employerSearchResults"><i class="fa fa-industry"></i> Search Employer</a></li>
+          <li><a href="/home/vacancySearchResults"><i class="fa fa-briefcase"></i> Search Home</a></li>
+          <li><a href="/home/employerSearchResults"><i class="fa fa-industry"></i> Search Sellers</a></li>
         </ul>
       </li>
-      <li><a href="{{-- {{ route('jobseeker.myJobApplications') }} --}}"><i class="fa fa-black-tie"></i> <span>My Job Applications</span></a></li>
+      <li><a href="{{-- {{ route('jobseeker.myJobApplications') }} --}}"><i class="glyphicon glyphicon-map-marker"></i> <span>My Property Requests</span></a></li>
       <li><a href="{{-- {{ route('profilePic.upload', Auth::user()->id ) }} --}}"><i class="fa fa-gear"></i> <span>Account Settings</span></a></li>
       <li><a href="/home/contactAdmin"><i class="fa fa-life-buoy text-default"></i> <span>Contact Admin</span></a></li>
     </ul>

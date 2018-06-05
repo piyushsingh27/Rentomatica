@@ -20,7 +20,7 @@
           <span class="info-box-icon bg-yellow"><i class="fa fa-industry"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">Employers</span>
+            <span class="info-box-text">Sellers Profiles</span>
             <span class="info-box-number">{{-- {{ $employerCount }} --}}</span>
           </div>
         </div>
@@ -31,7 +31,7 @@
           <span class="info-box-icon bg-blue"><i class="fa fa-group"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">JobSeekers</span>
+            <span class="info-box-text">Buyers Profiles</span>
             <span class="info-box-number">{{-- {{ $userCount }} --}}</span>
           </div>
         </div>
@@ -39,21 +39,21 @@
 
       <div class="col-md-4">
         <div class="info-box">
-          <span class="info-box-icon bg-aqua"><i class="fa fa-black-tie"></i></span>
+          <span class="info-box-icon bg-aqua"><i class="fa fa-briefcase"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">JobSeeker PRofiles</span>
+            <span class="info-box-text">Properties</span>
             <span class="info-box-number">{{-- {{ $jobseekerProfile }} --}}</span>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4">
+      <!--<div class="col-md-4">
         <div class="info-box">
           <span class="info-box-icon bg-green"><i class="fa fa-briefcase"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">Vacancies</span>
+            <span class="info-box-text">Properties</span>
             <span class="info-box-number">{{-- {{ $vacancyCount }} --}}</span>
           </div>
         </div>
@@ -79,7 +79,7 @@
             <span class="info-box-number">{{-- {{ $testCount }} --}}</span>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 
@@ -88,7 +88,7 @@
   <!-- Default box -->
   <div class="box box-danger">
     <div class="box-header with-border">
-      <h3 class="box-title"><strong>Latest Employers Registered</strong></h3>
+      <h3 class="box-title"><strong>Latest Sellers Registered</strong></h3>
 
       <div class="box-tools pull-right">
         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -105,7 +105,7 @@
             <tr>
               <th>ID</th>
               <th>Name</th>
-              <th>Company Name</th>
+              <th>Adhaar Number</th>
               <th>Email</th>
               <th>Created</th>
             </tr>              
@@ -145,15 +145,15 @@
     <div class="col-md-6">
       <div class="info-box">
         <div class="callout callout-success">
-          <h3 class="box-title"><strong>Vacancies</strong></h3></div>
+          <h3 class="box-title"><strong>Properties</strong></h3></div>
 
           <div class="box-body table-responsive no-padding">
             <table class="table table-hover">
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Company Name</th>
-                  <th>Industry</th>
+                  <th>Property Type</th>
+                  <th>Price</th>
                   <th>Status</th>
                   <th>Created</th>
                 </tr>
@@ -191,7 +191,7 @@
         <div class="col-md-6">
           <div class="info-box">
             <div class="callout callout-info">
-              <h3 class="box-title"><strong>Jobseekers</strong></h3></div>
+              <h3 class="box-title"><strong>Buyers</strong></h3></div>
               <div class="box-body table-responsive no-padding">
                 <table class="table table-hover">
                   <thead>
@@ -199,6 +199,7 @@
                       <th>ID</th>
                       <th>Name</th>
                       <th>Email</th>
+                      <th>Phone No</th>
                       <th>Created</th>
                     </tr>
                   </thead>

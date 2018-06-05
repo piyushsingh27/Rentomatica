@@ -34,6 +34,8 @@ Route::group(['namespace' => 'User'], function() {
 	Auth::routes();
 	
 	Route::get('/home', 'HomeController@index')->name('home');
+	Route::get('/home/propertySearch', 'HomeController@propertySearchResults');
+
 });
 
 //	Seller Routes
@@ -59,6 +61,7 @@ Route::group(['namespace' => 'Admin'], function() {
 	
 	Route::prefix('admin')->group(function() {
 		Route::get('/', 'HomeController@index')->name('admin.home');
+		Route::get('/home/verify','HomeController@admintable');
 
 		//	Authentication Routes
 		Route::get('login', 'Auth\LoginController@showLoginForm')->name('admin.login');

@@ -13,6 +13,13 @@ class HomeController extends Controller
     }
     
     public function index() {
+
     	return view('User.homepage.home');
     }
+
+    public function propertySearchResults() {
+    	
+    return view('User.homepage.propertySearchResults');
+}
+
 }

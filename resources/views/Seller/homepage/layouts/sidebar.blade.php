@@ -11,7 +11,7 @@
         @endisset
       </div>
       <div class="pull-left info">
-        <p><a href="/employer/home" style="color: white;">{{ Auth::user()->firstname." ".Auth::user()->lastname }}</a></p>
+        <p><a href="/employer/home" style="color: white;">{{ Auth::user()->name }}</a></p>
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
     </div>
@@ -33,21 +33,21 @@
           <li><a href="{{-- {{ route('employerAddress.show', Auth::user()->id) }} --}}"><i class="fa fa-map-marker"></i> Edit Address</a></li>
         </ul>
       </li>
-      <li><a href="/employer/jobseekerSearchResults"><i class="fa fa-search"></i> <span>Search JobSeekers</span></a></li>
+     <!-- <li><a href="/employer/jobseekerSearchResults"><i class="fa fa-search"></i> <span>Search JobSeekers</span></a></li>-->
       <li class="treeview">
         <a href="">
           <i class="fa fa-briefcase"></i>
-          <span>Vacancies</span>
+          <span>Properties</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{-- {{ route('vacancy.create') }} --}}"><i class="fa fa-circle-o"></i> Create New Vacancy</a></li>
-          <li><a href="{{-- {{ route('vacancies.index', Auth::user()->id) }} --}}"><i class="fa fa-circle-o"></i> View All Vacancies</a></li>
+          <li><a href="{{-- {{ route('vacancy.create') }} --}}"><i class="fa fa-circle-o"></i> Upload New Vacancy</a></li>
+          <li><a href="{{-- {{ route('vacancies.index', Auth::user()->id) }} --}}"><i class="fa fa-circle-o"></i> View All Properties</a></li>
         </ul>
       </li>
-      <li><a href="{{-- {{ route('questionnareBuilder.index') }} --}}"><i class="fa fa-question"></i> <span>Questionnaire Builder</span></a></li>
+      <!--<li><a href="{{-- {{ route('questionnareBuilder.index') }} --}}"><i class="fa fa-question"></i> <span>Questionnaire Builder</span></a></li>-->
       <li class="treeview">
         <a href="">
           <i class="fa fa-files-o"></i>
@@ -57,11 +57,11 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{-- {{ route('employer.reports.vacancyDetails') }} --}}"><i class="fa fa-circle-o"></i> My Vacancy Report</a></li>
-          <li><a href="{{-- {{ route('employer.reports.locationWiseVacancyReport') }} --}}"><i class="fa fa-circle-o"></i> Location-wise Vacancies</a></li>
-          <li><a href="{{-- {{ route('employer.reports.showJobseekerReport') }} --}}"><i class="fa fa-circle-o"></i> Jobseeker Profile Report</a></li>
-          <li><a href="{{-- {{ route('employer.reports.categoryWiseJobseekerProfileReport') }} --}}"><i class="fa fa-circle-o"></i> Category-wise Jobseekers</a></li>
-          <li><a href="{{-- {{ route('employer.reports.locationWiseJobseekerProfileReport') }} --}}"><i class="fa fa-circle-o"></i> Location-wise Jobseekers</a></li>
+          <li><a href="{{-- {{ route('employer.reports.vacancyDetails') }} --}}"><i class="fa fa-circle-o"></i> My Property Report</a></li>
+          <li><a href="{{-- {{ route('employer.reports.locationWiseVacancyReport') }} --}}"><i class="fa fa-circle-o"></i> Location-wise Properties</a></li>
+          <li><a href="{{-- {{ route('employer.reports.showJobseekerReport') }} --}}"><i class="fa fa-circle-o"></i> Buyer Profile Report</a></li>
+          <li><a href="{{-- {{ route('employer.reports.categoryWiseJobseekerProfileReport') }} --}}"><i class="fa fa-circle-o"></i> Category-wise Buyers</a></li>
+          <li><a href="{{-- {{ route('employer.reports.locationWiseJobseekerProfileReport') }} --}}"><i class="fa fa-circle-o"></i> Location-wise Buyers</a></li>
         </ul>
       </li>
       <li><a href="{{-- {{ route('logo.upload', Auth::user()->id ) }} --}}"><i class="fa fa-gear"></i> <span>Account Settings</span></a></li>

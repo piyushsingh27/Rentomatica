@@ -1,3 +1,4 @@
+<!--Author    Piyush-->
 @extends('Seller.homepage.layouts.app')
 @section('title', 'Sellers')
 
@@ -9,7 +10,6 @@
 [class^='select2'] {
 	border-radius: 0px !important;
 }
-
 .select2-container {
 	padding: 0px;
 	border-width: 0px;
@@ -18,11 +18,9 @@
 	height: 38px;
 	line-height: 38px;
 }
-
 .select2-container.form-control {
 	height: auto !important;
 }
-
 .form-control{
 	-webkit-appearance:none;
 	-moz-appearance: none;
@@ -103,7 +101,7 @@
 				<div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
 					<label for="price" class="col-md-3 control-label">Price<span class="text-red">*</span></label>
 					<div class="col-md-6">
-						<input type="text" maxlength="2" class="form-control pull-right" id="price" name="price" placeholder="Prefered Experience" min="0" value="{{ old('price') }}">
+						<input type="text" class="form-control pull-right" id="price" name="price" placeholder="Price" min="0" value="{{ $property->price }}">
 					</div>
 				</div>
 
@@ -113,21 +111,21 @@
 				<div class="form-group{{ $errors->has('photo1') ? ' has-error' : '' }}">
 					<label for="photo1" class="col-md-3 control-label">Photo 1</label>
 					<div class="col-md-6">
-						<input type="file" maxlength="2" class="form-control pull-right" id="photo1" name="photo1" placeholder="Prefered Experience" min="0" value="{{ old('photo1') }}">
+						<input type="file" class="form-control pull-right" id="photo1" name="photo1" placeholder="Prefered Experience" min="0" value="{{ $property->photo1 }}">
 					</div>
 				</div>
 
 				<div class="form-group{{ $errors->has('photo2') ? ' has-error' : '' }}">
 					<label for="photo2" class="col-md-3 control-label">Photo 2</label>
 					<div class="col-md-6">
-						<input type="file" maxlength="2" class="form-control pull-right" id="photo2" name="photo2" placeholder="Prefered Experience" min="0" value="{{ old('photo2') }}">
+						<input type="file" class="form-control pull-right" id="photo2" name="photo2" placeholder="Prefered Experience" min="0" value="{{ $property->photo2 }}">
 					</div>
 				</div>
 
 				<div class="form-group{{ $errors->has('photo3') ? ' has-error' : '' }}">
 					<label for="photo3" class="col-md-3 control-label">Photo 3</label>
 					<div class="col-md-6">
-						<input type="file" maxlength="2" class="form-control pull-right" id="photo3" name="photo3" placeholder="Prefered Experience" min="0" value="{{ old('photo3') }}">
+						<input type="file" class="form-control pull-right" id="photo3" name="photo3" placeholder="Prefered Experience" min="0" value="{{ $property->photo3 }}">
 					</div>
 				</div>	
 
@@ -135,9 +133,9 @@
 				<h4><span style="color: #e08e0b;">Property Highlights</span></h4>
 
 				<div class="form-group{{ $errors->has('highlights') ? ' has-error' : '' }}">
-					<label for="highlights" class="col-md-3 control-label">Job Description<span class="text-red">*</span></label>
+					<label for="highlights" class="col-md-3 control-label">Highlights<span class="text-red">*</span></label>
 					<div class="col-md-6">
-						<textarea class="form-control pull-right" id="highlights" name="highlights" placeholder="Job Description" rows="5">{{ old('highlights') }}</textarea>
+						<textarea class="form-control pull-right" id="highlights" name="highlights" placeholder="Highlights" rows="5">{{ old('highlights') }}</textarea>
 					</div>
 				</div>
 
@@ -147,82 +145,82 @@
 				<div class="form-group{{ $errors->has('addressText') ? ' has-error' : '' }}">
 					<label for="addressText" class="col-md-3 control-label">Address<span class="text-red">*</span></label>
 					<div class="col-md-6">
-						<textarea class="form-control pull-right" id="addressText" name="addressText" placeholder="Job Description" rows="5">{{ old('addressText') }}</textarea>
+						<textarea class="form-control pull-right" id="addressText" name="addressText" placeholder="Address" rows="5">{{ old('addressText') }}</textarea>
 					</div>
 				</div>
 
 				<div class="form-group{{ $errors->has('locality') ? ' has-error' : '' }}">
 					<label for="locality" class="col-md-3 control-label">Locality<span class="text-red">*</span></label>
 					<div class="col-md-6">
-						<input type="text" maxlength="2" class="form-control pull-right" id="locality" name="locality" placeholder="Prefered Experience" min="0" value="{{ old('locality') }}">
+						<input type="text" class="form-control pull-right" id="locality" name="locality" placeholder="Locality" min="0" value="{{ $property->locality }}">
 					</div>
 				</div>
 
 				<div class="form-group{{ $errors->has('landmark1') ? ' has-error' : '' }}">
-					<label for="landmark1" class="col-md-3 control-label">Landmark 1<span class="text-red">*</span></label>
+					<label for="landmark1" class="col-md-3 control-label">Landmark 1</label>
 					<div class="col-md-6">
-						<input type="text" maxlength="2" class="form-control pull-right" id="landmark1" name="landmark1" placeholder="Prefered Experience" min="0" value="{{ old('landmark1') }}">
+						<input type="text" class="form-control pull-right" id="landmark1" name="landmark1" placeholder="Landmark 1" min="0" value="{{ $property->landmark1 }}">
 					</div>
 				</div>
 
 				<div class="form-group{{ $errors->has('landmark2') ? ' has-error' : '' }}">
-					<label for="landmark2" class="col-md-3 control-label">Landmark 2<span class="text-red">*</span></label>
+					<label for="landmark2" class="col-md-3 control-label">Landmark 2</label>
 					<div class="col-md-6">
-						<input type="text" maxlength="2" class="form-control pull-right" id="landmark2" name="landmark2" placeholder="Prefered Experience" min="0" value="{{ old('landmark2') }}">
+						<input type="text" class="form-control pull-right" id="landmark2" name="landmark2" placeholder="Landmark 2" min="0" value="{{ $property->landmark2 }}">
 					</div>
 				</div>
 
-				<div class="form-group{{ $errors->has('landmark2') ? ' has-error' : '' }}">
-					<label for="landmark2" class="col-md-3 control-label">Street<span class="text-red">*</span></label>
+				<div class="form-group{{ $errors->has('street') ? ' has-error' : '' }}">
+					<label for="street" class="col-md-3 control-label">Street<span class="text-red">*</span></label>
 					<div class="col-md-6">
-						<input type="text" maxlength="2" class="form-control pull-right" id="landmark2" name="landmark2" placeholder="Prefered Experience" min="0" value="{{ old('landmark2') }}">
+						<input type="text" class="form-control pull-right" id="street" name="street" placeholder="Street Name" min="0" value="{{ $property->street }}">
 					</div>
 				</div>
 
-				<div class="form-group{{ $errors->has('landmark2') ? ' has-error' : '' }}">
-					<label for="landmark2" class="col-md-3 control-label">District<span class="text-red">*</span></label>
+				<div class="form-group{{ $errors->has('district') ? ' has-error' : '' }}">
+					<label for="district" class="col-md-3 control-label">District<span class="text-red">*</span></label>
 					<div class="col-md-6">
-						<input type="text" maxlength="2" class="form-control pull-right" id="landmark2" name="landmark2" placeholder="Prefered Experience" min="0" value="{{ old('landmark2') }}">
+						<input type="text" class="form-control pull-right" id="district" name="district" placeholder="District" min="0" value="{{ $property->district }}">
 					</div>
 				</div>
 
-				<div class="form-group{{ $errors->has('landmark2') ? ' has-error' : '' }}">
-					<label for="landmark2" class="col-md-3 control-label">City<span class="text-red">*</span></label>
+				<div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
+					<label for="city" class="col-md-3 control-label">City<span class="text-red">*</span></label>
 					<div class="col-md-6">
-						<input type="text" maxlength="2" class="form-control pull-right" id="landmark2" name="landmark2" placeholder="Prefered Experience" min="0" value="{{ old('landmark2') }}">
+						<input type="text" class="form-control pull-right" id="city" name="city" placeholder="city" min="0" value="{{ $property->city }}">
 					</div>
 				</div>
 
-				<div class="form-group{{ $errors->has('landmark2') ? ' has-error' : '' }}">
-					<label for="landmark2" class="col-md-3 control-label">State<span class="text-red">*</span></label>
+				<div class="form-group{{ $errors->has('state') ? ' has-error' : '' }}">
+					<label for="state" class="col-md-3 control-label">State<span class="text-red">*</span></label>
 					<div class="col-md-6">
-						<input type="text" maxlength="2" class="form-control pull-right" id="landmark2" name="landmark2" placeholder="Prefered Experience" min="0" value="{{ old('landmark2') }}">
+						<input type="text" class="form-control pull-right" id="state" name="state" placeholder="State" min="0" value="{{ $property->state }}">
 					</div>
 				</div>
 
-				<div class="form-group{{ $errors->has('landmark2') ? ' has-error' : '' }}">
-					<label for="landmark2" class="col-md-3 control-label">Pincode<span class="text-red">*</span></label>
+				<div class="form-group{{ $errors->has('pincode') ? ' has-error' : '' }}">
+					<label for="pincode" class="col-md-3 control-label">Pincode<span class="text-red">*</span></label>
 					<div class="col-md-6">
-						<input type="text" maxlength="2" class="form-control pull-right" id="landmark2" name="landmark2" placeholder="Prefered Experience" min="0" value="{{ old('landmark2') }}">
+						<input type="text" class="form-control pull-right" id="pincode" name="pincode" placeholder="Prefered Experience" min="0" value="{{ $property->pincode }}">
 					</div>
 				</div>
 
 				
 
 				<hr>
-				<h4><span style="color: #e08e0b;">Screening Test</span></h4>
+				<h4><span style="color: #e08e0b;">Property Status</span></h4>
 				
-				<div class="form-group{{ $errors->has('landmark2') ? ' has-error' : '' }}">
-					<label for="landmark2" class="col-md-3 control-label">Status<span class="text-red">*</span></label>
+				<div class="form-group{{ $errors->has('sold') ? ' has-error' : '' }}">
+					<label for="sold" class="col-md-3 control-label">Sold Status</label>
 					<div class="col-md-6">
-						<input type="text" maxlength="2" class="form-control pull-right" id="landmark2" name="landmark2" placeholder="Prefered Experience" min="0" value="{{ old('landmark2') }}" disabled>
+						<input type="text" class="form-control pull-right" id="sold" name="sold" placeholder="Pincode" min="0" value="{{ $property->sold }}" disabled>
 					</div>
 				</div>
 
 
 				
 
-				<hr>
+				<!--<hr>
 				<input type="hidden" name="id" value="{{ Auth::user()->id }}">
 				<div class="form-group{{ $errors->has('remember') ? ' has-error' : '' }}">
 					<div class="col-xs-10 col-md-offset-4">
@@ -232,7 +230,7 @@
 							</label>
 						</div>
 					</div>
-				</div>
+				</div>-->
 
 				<div class="form-group">
 					<div class="col-md-offset-5 col-md-2">
@@ -266,24 +264,32 @@
 	$('#dateOfBirth').datepicker({
 		autoclose: true
 	})
-
 	$('#openingDate').datepicker({
 		autoclose: true,
 		format: 'yyyy-mm-dd'
 	})
-
 	$('#closingDate').datepicker({
 		autoclose: true,
 		format: 'yyyy-mm-dd'
 	})
-
 	$('.select2').select2({
 		placeholder: "Select…"
 	})
-
-	$("#jobcategoryId").val("{{ old('jobcategoryId') }}").trigger('change');
+	$("#propertyType").val("{{ old('propertyType') }}").trigger('change');
 	$("#preferedworktype").val("{{ old('preferedworktype') }}").trigger('change');
 	$("#preferedednlevel").val("{{ old('preferedednlevel') }}").trigger('change');
 </script>
 
 @endsection
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
